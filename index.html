@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Agenda telefônica</title>
+        <link rel="stylesheet" href="./css/style.css">        
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalho__titulo">
+                <h1>Agenda telefônica</h1>
+                <img src="./imgs/telefone.png">
+            </div>
+        </header>
+        <main class="principal">
+            <section class="agenda">
+                <div class="agenda__div">
+                    <form class="agenda__formulario" data-form>
+                        <fieldset class="agenda__formulario__campo">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" class="agenda__formulario__campo__input" required>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="agenda__formulario__campo">
+                            <label for="telefone">Tel:</label>
+                            <input type="text" name="telefone" class="agenda__formulario__campo__input" required>
+                            <span></span>
+                        </fieldset>
+                        <fieldset class="agenda__formulario__campo">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" class="agenda__formulario__campo__input" required>
+                            <span></span>
+                        </fieldset> 
+                        
+                        <input type="submit" value="Salvar">
+                        <span></span>
+                    </form>
+                    <div class="agenda__div__busca">
+                        <input type="text" placeholder="Buscar..." data-busca style="border: none; border-radius: 5px;">
+                        <button data-btn-busca>Buscar</button>
+                    </div>
+                </div>
+
+                <dl data-lista class="lista">
+                   <!-- <dt class="lista__contato">Lucas
+                        <dd>98991707178</dd>
+                        <dd>lucasdepaula3991@gmail.com</dd>
+                    </dt> -->
+                </dl>
+            </section>
+            </main>
+        <footer>
+
+        </footer>
+
+        <script src="./js/script.js" type="module"></script>
+
+    </body>
+
+</html>

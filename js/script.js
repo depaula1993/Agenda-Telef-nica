@@ -1,0 +1,48 @@
+import {listaContatos} from "./lista.js";
+import { buscaDados } from "./buscarDados.js";
+import { salvaDados, dadosSalvos } from "./salvarDados.js";
+const campos = document.querySelectorAll("[required]");
+const form = document.querySelector("[data-form]");
+const lista = document.querySelector("[data-lista]"); 
+
+campos.forEach(campo => {
+    campo.value = "";
+})
+dadosSalvos.forEach(contato => {
+    lista.appendChild(listaContatos(contato));
+
+});
+
+form.addEventListener("submit", (e) =>{
+
+    e.preventDefault();
+    
+    /*class contato {
+        constructor(nome, telefone, email){
+            this.nome = nome;
+            this.telefone = telefone;
+            this.email = email;
+        }
+    }
+    
+    const novoContato = new contato(campos[0].value, campos[1].value, campos[2].value);
+
+    console.log(novoContato);
+    */
+
+    const novoContato = {
+        nome: campos[0].value,
+        telefone: campos[1].value,
+        email: campos[2].value
+    }
+    
+    lista.appendChild(listaContatos(novoContato));
+
+    salvaDados(novoContato);
+
+})
+
+buscaDados();
+
+
+
