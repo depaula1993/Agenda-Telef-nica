@@ -1,4 +1,5 @@
 import { botaoAtualiza } from "./atualizaContato.js";
+import { botaoExcluir } from "./excluirContato.js";
 import { listaContatos } from "./lista.js";
 export const campos = document.querySelectorAll("[required]");
 
@@ -8,6 +9,8 @@ export const lista = document.querySelector("[data-lista]");
 
 export function buscaDados () {
 
+    lista.setAttribute("data-lista", 1);
+    
     botaoBusca.addEventListener("click", () =>{
         const dado = busca.value;
         const regex = new RegExp(dado,"i");
@@ -18,9 +21,15 @@ export function buscaDados () {
         lista.innerHTML = "";
 
         contato.forEach(element => {
+            const botoes = document.createElement("div");
+            botoes.classList.add("botoes__atualiza_exclui")
             lista.appendChild(listaContatos(element));
             lista.classList.add("lista__Busca");
-            lista.appendChild(botaoAtualiza(element));     
+            botoes.appendChild(botaoAtualiza(element));
+            botoes.appendChild(botaoExcluir());
+            lista.appendChild(botoes)
+            //lista.appendChild(botaoAtualiza(element));
+            //lista.appendChild(botaoExcluir());     
         });
         
         

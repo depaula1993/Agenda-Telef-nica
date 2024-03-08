@@ -8,7 +8,7 @@ export function botaoAtualiza(contato) {
 
     const botaoAtualiza = document.createElement("button");
     botaoAtualiza.innerHTML = "Atualizar"
-    botaoAtualiza.classList.add("botaoAtualiza");
+    botaoAtualiza.classList.add("botoes");
 
     botaoAtualiza.addEventListener("click", () =>{
         

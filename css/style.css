@@ -95,13 +95,20 @@ body{
     text-align: left;
 }
 
-/*.botaoAtualiza{
-    
-}*/
+.botoes{
+    width: 125px;    
+}
 
 .lista__Busca{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 7px;
+}
+
+.botoes__atualiza_exclui{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1px;
 }

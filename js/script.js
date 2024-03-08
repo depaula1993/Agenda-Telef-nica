@@ -36,6 +36,12 @@ form.addEventListener("submit", (e) =>{
         telefone: campos[1].value,
         email: campos[2].value
     }
+
+    lista.innerHTML = "";
+    
+    dadosSalvos.forEach(contato => {
+        lista.appendChild(listaContatos(contato));
+    });
     
     lista.appendChild(listaContatos(novoContato));
 
