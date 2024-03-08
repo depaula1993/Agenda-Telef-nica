@@ -1,5 +1,5 @@
 import {listaContatos} from "./lista.js";
-import { buscaDados } from "./buscarDados.js";
+import { busca, buscaDados } from "./buscarDados.js";
 import { salvaDados, dadosSalvos } from "./salvarDados.js";
 const campos = document.querySelectorAll("[required]");
 const form = document.querySelector("[data-form]");
@@ -10,8 +10,9 @@ campos.forEach(campo => {
 })
 dadosSalvos.forEach(contato => {
     lista.appendChild(listaContatos(contato));
-
 });
+
+busca.value = "";
 
 form.addEventListener("submit", (e) =>{
 

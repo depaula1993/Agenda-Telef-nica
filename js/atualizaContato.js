@@ -12,16 +12,17 @@ export function botaoAtualiza(contato) {
 
     botaoAtualiza.addEventListener("click", () =>{
         
-        let posicaoContato = dadosSalvos.findIndex(objeto => objeto.id === contato.id);
-        dadosSalvos[posicaoContato].nome = campos[0].value;
-        dadosSalvos[posicaoContato].telefone = campos[1].value;
-        dadosSalvos[posicaoContato].email = campos[2].value;
+        if(campos[0].value != "" && campos[1].value != "" && campos[2].value != ""){
+            let posicaoContato = dadosSalvos.findIndex(objeto => objeto.id === contato.id);
+            dadosSalvos[posicaoContato].nome = campos[0].value;
+            dadosSalvos[posicaoContato].telefone = campos[1].value;
+            dadosSalvos[posicaoContato].email = campos[2].value;
+        
+            lista.innerHTML = "";
+            lista.appendChild(listaContatos(dadosSalvos[posicaoContato]));
 
-        lista.innerHTML = "";
-        lista.appendChild(listaContatos(contato));
-
-        localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
-    
+            localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
+        }    
     })
 
     return botaoAtualiza
