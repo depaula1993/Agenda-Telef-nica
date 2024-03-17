@@ -9,11 +9,9 @@ export const lista = document.querySelector("[data-lista]");
 
 export function buscaDados () {
 
-    lista.setAttribute("data-lista", 1);
-    
     botaoBusca.addEventListener("click", () =>{
         const dado = busca.value;
-        const regex = new RegExp(dado,"i");
+        const regex = new RegExp(`^${dado}`,'i');
         const dadosSalvos = JSON.parse(localStorage.getItem('contatos'));    
         const contato = dadosSalvos.filter((elemento) => regex.test(elemento.nome) || elemento.telefone == dado 
         || elemento.email == dado);
@@ -26,7 +24,7 @@ export function buscaDados () {
             lista.appendChild(listaContatos(element));
             lista.classList.add("lista__Busca");
             botoes.appendChild(botaoAtualiza(element));
-            botoes.appendChild(botaoExcluir());
+            botoes.appendChild(botaoExcluir(element));
             lista.appendChild(botoes)
             //lista.appendChild(botaoAtualiza(element));
             //lista.appendChild(botaoExcluir());     
