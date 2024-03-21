@@ -1,4 +1,4 @@
-import {listaContatos} from "./lista.js";
+import {listaContatos, ordenaContatos} from "./lista.js";
 import { busca, buscaDados } from "./buscarDados.js";
 import { salvaDados, dadosSalvos } from "./salvarDados.js";
 const campos = document.querySelectorAll("[required]");
@@ -8,6 +8,9 @@ const lista = document.querySelector("[data-lista]");
 campos.forEach(campo => {
     campo.value = "";
 })
+
+ordenaContatos(dadosSalvos);
+
 dadosSalvos.forEach(contato => {
     lista.appendChild(listaContatos(contato));
 });
@@ -39,13 +42,17 @@ form.addEventListener("submit", (e) =>{
 
     lista.innerHTML = "";
     
+    salvaDados(novoContato);
+    
+    ordenaContatos(dadosSalvos);
+
     dadosSalvos.forEach(contato => {
         lista.appendChild(listaContatos(contato));
     });
     
-    lista.appendChild(listaContatos(novoContato));
+    //lista.appendChild(listaContatos(novoContato));
 
-    salvaDados(novoContato);
+    
 
 })
 
