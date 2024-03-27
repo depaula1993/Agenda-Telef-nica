@@ -9,6 +9,7 @@ export function salvaDados(dados) {
     }
 
     dadosSalvos.push(dados);
+    
     localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
 
 }

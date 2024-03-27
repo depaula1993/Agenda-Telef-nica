@@ -1,7 +1,6 @@
 import { lista } from "./buscarDados.js";
-import { listaContatos } from "./lista.js";
+import { listaContatos, ordenaContatos } from "./lista.js";
 import { dadosSalvos } from "./salvarDados.js";
-
 
 export function botaoExcluir(contato){
     const botaoExcluir = document.createElement("button");
@@ -17,12 +16,14 @@ export function botaoExcluir(contato){
         localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
         
         lista.innerHTML = "";
+
+        const dadosSalvosClonado = dadosSalvos.slice();
         
-        dadosSalvos.forEach(contato => {
+        ordenaContatos(dadosSalvosClonado)        
+        
+        dadosSalvosClonado.forEach(contato => {
             lista.appendChild(listaContatos(contato));
         });
-        
-        
         
     } )
 

@@ -9,9 +9,11 @@ campos.forEach(campo => {
     campo.value = "";
 })
 
-ordenaContatos(dadosSalvos);
+const dadosSalvosClonado = dadosSalvos.slice();
 
-dadosSalvos.forEach(contato => {
+ordenaContatos(dadosSalvosClonado);
+
+dadosSalvosClonado.forEach(contato => {
     lista.appendChild(listaContatos(contato));
 });
 
@@ -44,14 +46,18 @@ form.addEventListener("submit", (e) =>{
     
     salvaDados(novoContato);
     
-    ordenaContatos(dadosSalvos);
 
-    dadosSalvos.forEach(contato => {
+    const dadosSalvosClonado = dadosSalvos.slice();
+
+    ordenaContatos(dadosSalvosClonado);
+    
+    dadosSalvosClonado.forEach(contato => {
         lista.appendChild(listaContatos(contato));
     });
     
     //lista.appendChild(listaContatos(novoContato));
 
+    
     
 
 })
