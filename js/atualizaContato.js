@@ -1,6 +1,7 @@
-import { lista } from "./buscarDados.js";
+import { lista, comoAtualizar } from "./buscarDados.js";
 import { listaContatos } from "./lista.js";
 import { dadosSalvos } from "./salvarDados.js";
+
 
 const campos = document.querySelectorAll("[required]");
 
@@ -20,6 +21,7 @@ export function botaoAtualiza(contato) {
         
             lista.innerHTML = "";
             lista.appendChild(listaContatos(dadosSalvos[posicaoContato]));
+            comoAtualizar.style.display = "none";
 
             localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
         }    

@@ -6,6 +6,7 @@ export const campos = document.querySelectorAll("[required]");
 export const busca = document.querySelector("[data-busca]");
 const botaoBusca = document.querySelector("[data-btn-busca]");
 export const lista = document.querySelector("[data-lista]");
+export const comoAtualizar =  document.querySelector("[data-como-atualizar]");
 
 export function buscaDados () {
 
@@ -29,8 +30,8 @@ export function buscaDados () {
             //lista.appendChild(botaoAtualiza(element));
             //lista.appendChild(botaoExcluir());     
         });
-        
-        
+
+        comoAtualizar.style.display = "block";
         
         /*campos[0].value = contato.nome;
         campos[1].value = contato.telefone;

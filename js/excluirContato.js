@@ -1,4 +1,4 @@
-import { lista } from "./buscarDados.js";
+import { lista, comoAtualizar } from "./buscarDados.js";
 import { listaContatos, ordenaContatos } from "./lista.js";
 import { dadosSalvos } from "./salvarDados.js";
 
@@ -16,6 +16,8 @@ export function botaoExcluir(contato){
         localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
         
         lista.innerHTML = "";
+
+        comoAtualizar.style.display = "none";
 
         const dadosSalvosClonado = dadosSalvos.slice();
         
