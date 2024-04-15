@@ -1,5 +1,11 @@
 body{
     box-sizing: border-box;
+    display: grid;  
+    grid-template-columns: 1fr;  
+    grid-template-rows: 50px;  
+}
+
+.div__abaixo__body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;

@@ -11,61 +11,62 @@
         <link rel="stylesheet" href="./css/style.css">        
     </head>
     <body>
-        <header class="cabecalho">
-            <div class="cabecalho__titulo">
-                <h1>Agenda telefônica</h1>
-                <img src="./imgs/telefone.png">
-            </div>
-        </header>
-        <main class="principal">
-            <section class="agenda">
-                <div class="agenda__div__principal">
-                    <div class="agenda__primeiro__div">
-                        <form class="agenda__formulario" data-form>
-                            <fieldset class="agenda__formulario__campo">
-                                <label for="nome">Nome:</label>
-                                <input type="text" name="nome" class="agenda__formulario__campo__input" required>
+        <div class="div__abaixo__body">
+            <header class="cabecalho">
+                <div class="cabecalho__titulo">
+                    <h1>Agenda telefônica</h1>
+                    <img src="./imgs/telefone.png">
+                </div>
+            </header>
+            <main class="principal">
+                <section class="agenda">
+                    <div class="agenda__div__principal">
+                        <div class="agenda__primeiro__div">
+                            <form class="agenda__formulario" data-form>
+                                <fieldset class="agenda__formulario__campo">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" name="nome" class="agenda__formulario__campo__input" required>
+                                    <span></span>
+                                </fieldset>
+                                <fieldset class="agenda__formulario__campo">
+                                    <label for="telefone">Tel:</label>
+                                    <input type="text" name="telefone" class="agenda__formulario__campo__input" required>
+                                    <span></span>
+                                </fieldset>
+                                <fieldset class="agenda__formulario__campo">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" name="email" class="agenda__formulario__campo__input" required>
+                                    <span></span>
+                                </fieldset> 
+                                
+                                <input type="submit" value="Salvar">
                                 <span></span>
-                            </fieldset>
-                            <fieldset class="agenda__formulario__campo">
-                                <label for="telefone">Tel:</label>
-                                <input type="text" name="telefone" class="agenda__formulario__campo__input" required>
-                                <span></span>
-                            </fieldset>
-                            <fieldset class="agenda__formulario__campo">
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="email" class="agenda__formulario__campo__input" required>
-                                <span></span>
-                            </fieldset> 
-                            
-                            <input type="submit" value="Salvar">
-                            <span></span>
-                        </form>
-                        <p style="width: 200px; text-align: justify;">Faça a busca pelo contato para atualiza-lo ou exclui-lo.</exclui-lo></p>
-                        <div class="agenda__div__busca">
-                            <input type="text" placeholder="Buscar..." data-busca style="border: none; border-radius: 5px;">
-                            <button data-btn-busca>Buscar</button>
+                            </form>
+                            <p style="width: 200px; text-align: justify;">Faça a busca pelo contato para atualiza-lo ou exclui-lo.</exclui-lo></p>
+                            <div class="agenda__div__busca">
+                                <input type="text" placeholder="Buscar..." data-busca style="border: none; border-radius: 5px;">
+                                <button data-btn-busca>Buscar</button>
+                            </div>
+                        </div>
+                        <div class="agenda__segundo__div">
+                            <dl data-lista class="lista">
+                            <!-- <dt class="lista__contato">Lucas
+                                    <dd>98991707178</dd>
+                                    <dd>lucasdepaula3991@gmail.com</dd>
+                                </dt> -->
+                            </dl>
+                            <p data-como-atualizar style="width: 250px; text-align: justify; display: none;">Para atualizar um contato, digite os novos dados e 
+                            clique no botao atualizar do contato correspondente. Depois atualize a página.</p>
                         </div>
                     </div>
-                    <div class="agenda__segundo__div">
-                        <dl data-lista class="lista">
-                        <!-- <dt class="lista__contato">Lucas
-                                <dd>98991707178</dd>
-                                <dd>lucasdepaula3991@gmail.com</dd>
-                            </dt> -->
-                        </dl>
-                        <p data-como-atualizar style="width: 250px; text-align: justify; display: none;">Para atualizar um contato, digite os novos dados e 
-                        clique no botao atualizar do contato correspondente. Depois atualize a página.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <p>Desenvolvido por Lucas de Paula</p>
-        </footer>
+                </section>
+            </main>
+            <footer class="footer">
+                <p>Desenvolvido por Lucas de Paula</p>
+            </footer>
 
-        <script src="./js/script.js" type="module"></script>
-
+            <script src="./js/script.js" type="module"></script>
+        </div>    
     </body>
 
 </html>
