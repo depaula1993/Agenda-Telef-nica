@@ -1,5 +1,8 @@
 body{
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .cabecalho{
@@ -24,9 +27,10 @@ body{
 .principal{
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 
-.agenda{
+.agenda__div__principal{
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
@@ -119,4 +123,13 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     gap: 1px;
+}
+
+.footer{
+    background-color: #22d4fd;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border: solid 1px black;
+    
 }
