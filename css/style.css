@@ -1,11 +1,12 @@
 body{
     box-sizing: border-box;
     display: grid;  
-    /*grid-template-columns: 1fr; OBS: Desse jeito os estilos se mantem fixos sem perder as dimensões, mas ao reduzir o tamanho 
+    grid-template-columns: 1fr; /*OBS: Desse jeito os estilos se mantem fixos sem perder as dimensões, mas ao reduzir o tamanho 
     da página o conteúdo vai se escondendo */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));/* Desse jeito os estilos se mantem fixos sem perder as dimenões
+    /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); Desse jeito os estilos se mantem fixos sem perder as dimenões
     e ao reduzir a página o conteúdo se esconde um pouco, mas permanece centralizado na tela menor*/  
-    grid-template-rows: 50px;  
+    grid-template-rows: 50px;
+     
 }
 
 .div__abaixo__body{
