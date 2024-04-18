@@ -1,14 +1,10 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body{
     box-sizing: border-box;
-    display: grid;  
-    grid-template-columns: 1fr;/* OBS: Desse jeito os estilos se mantem fixos sem perder as dimensões, mas ao reduzir o tamanho 
-    da página o conteúdo vai se escondendo */
-    /*grid-template-columns: repeat(1, minmax(100px, 1fr)); Desse jeito os estilos se mantem fixos sem perder as dimenões
-    e ao reduzir a página o conteúdo se esconde um pouco, mas permanece centralizado na tela menor  
-    grid-template-rows: 50px;*/
     
-    /*grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));*/  
-    grid-template-rows: 50px;  
 }
 
 .div__abaixo__body{
@@ -27,6 +23,7 @@ body{
     display: flex;
     justify-content: center;
     border: 2px solid;
+    border-radius: 12px;
     background-color: #22d4fd;
     width: 800px;
     height: 50px;
@@ -34,6 +31,7 @@ body{
     gap: 50px;
     font-size: 40px;
     box-shadow: 3px 3px 4px gray;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .principal{
@@ -48,6 +46,7 @@ body{
     margin-top: 20px;
     flex-direction: row;
     border: 2px solid;
+    border-radius: 12px;
     width: 800px;
     padding: 20px;
     box-shadow: 3px 3px 4px gray;
@@ -71,6 +70,12 @@ body{
     display: flex;
     border: 2px solid #22d4fd;
     border-radius: 5px;
+    margin-top: -20px;
+    width: 193px;
+}
+
+.paragrafoBusca{
+    margin-top: -20px;
 }
 
 .agenda__formulario{
@@ -102,6 +107,7 @@ body{
    /* width: 300px;*/
     color: white;
     border: 1px solid #000000;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,6 +123,7 @@ body{
     border: 1px solid #000000;
     padding: 2px;
     text-align: left;
+    border-radius: 3px;
 }
 
 .botoes{
@@ -137,11 +144,63 @@ body{
     gap: 1px;
 }
 
+.paragrafoAtualizar{
+    width: 250px; 
+    text-align: justify; 
+    display: none;
+}
+
 .footer{
     background-color: #22d4fd;
     padding: 15px;
     text-align: center;
     margin-top: 20px;
     border: solid 1px black;
-    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+@media screen and (max-width: 768px){
+    .div__abaixo__body{
+        display: block;
+        
+    }
+    .cabecalho__titulo{
+        width: 70vw;
+        font-size: large;
+        height: 5vh;
+    }
+    .agenda__div__principal{
+        display: block;
+        width: 70vw;
+    }
+
+    .agenda__segundo__div{
+        margin-top: 30px;
+    }
+
+    .agenda__div__busca{
+        width: 59.8vw;
+        margin-top: -20px ;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .paragrafoBusca{
+        margin-top: -40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lista__contato__dado{
+        font-size: 14px;
+    }
+    .footer{
+        padding: 12px;
+        font-size: 15px;
+    }
+    .paragrafoAtualizar{
+        width: 220px;
+        font-size: 15px;
+    }
 }
