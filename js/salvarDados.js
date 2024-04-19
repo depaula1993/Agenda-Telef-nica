@@ -12,4 +12,6 @@ export function salvaDados(dados) {
     
     localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
 
+    comoAtualizar.style.display = "none";
+
 }
