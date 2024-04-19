@@ -204,21 +204,22 @@ body{
         margin-right: auto;
         margin-right: auto;
         width: auto;
-        font-size: 5vw;
+        /*font-size: 5vw;*/
         
     }
     .inputBusca{
         width: 100px;
     }
     .lista__contato__dado{
-        font-size: 5vw;
+        /*font-size: 5vw;*/
+        width: auto;
     }
     .footer{
         padding: 12px;
         font-size: 15px;
     }
     .paragrafoAtualizar{
-        font-size: 5vw;
+        /*font-size: 5vw;*/
         width: auto;
     }
 }
