@@ -57,9 +57,6 @@ form.addEventListener("submit", (e) =>{
     
     //lista.appendChild(listaContatos(novoContato));
 
-    
-    
-
 })
 
 buscaDados();

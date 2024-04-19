@@ -152,7 +152,7 @@ body{
 }
 
 .paragrafoAtualizar{
-    width: 230px;
+    width: 250px;
     text-align: justify; 
     display: none;
     
@@ -208,7 +208,8 @@ body{
         
     }
     .inputBusca{
-        width: 100px;
+        width: 110px;
+        
     }
     .lista__contato__dado{
         /*font-size: 5vw;*/

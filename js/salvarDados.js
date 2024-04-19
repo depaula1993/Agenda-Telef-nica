@@ -1,3 +1,4 @@
+import { comoAtualizar } from "./buscarDados.js";
 export const dadosSalvos = JSON.parse(localStorage.getItem('contatos')) || [];
 
 export function salvaDados(dados) {
