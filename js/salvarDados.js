@@ -1,4 +1,4 @@
-import { comoAtualizar } from "./buscarDados.js";
+import { comoAtualizar, cttNaoEncontrado } from "./buscarDados.js";
 export const dadosSalvos = JSON.parse(localStorage.getItem('contatos')) || [];
 
 export function salvaDados(dados) {
@@ -14,5 +14,6 @@ export function salvaDados(dados) {
     localStorage.setItem('contatos', JSON.stringify(dadosSalvos));
 
     comoAtualizar.style.display = "none";
+    cttNaoEncontrado.style.display ="none";
 
 }

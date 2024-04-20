@@ -1,4 +1,4 @@
-import { lista, comoAtualizar } from "./buscarDados.js";
+import { lista, comoAtualizar, cttNaoEncontrado } from "./buscarDados.js";
 import { listaContatos, ordenaContatos } from "./lista.js";
 import { dadosSalvos } from "./salvarDados.js";
 
@@ -18,6 +18,7 @@ export function botaoExcluir(contato){
         lista.innerHTML = "";
 
         comoAtualizar.style.display = "none";
+        cttNaoEncontrado.style.display ="none";
 
         const dadosSalvosClonado = dadosSalvos.slice();
         
