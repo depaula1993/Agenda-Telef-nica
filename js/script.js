@@ -45,7 +45,10 @@ form.addEventListener("submit", (e) =>{
     lista.innerHTML = "";
     
     salvaDados(novoContato);
-    
+
+    campos.forEach(campo => {
+        campo.value = "";
+    })
 
     const dadosSalvosClonado = dadosSalvos.slice();
 
