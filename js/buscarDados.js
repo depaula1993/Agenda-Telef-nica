@@ -17,8 +17,6 @@ export function buscaDados () {
         const dadosSalvos = JSON.parse(localStorage.getItem('contatos'));    
         const contato = dadosSalvos.filter((elemento) => regex.test(elemento.nome) || elemento.telefone == dado 
         || elemento.email == dado);
-
-        console.log(contato);
         
         lista.innerHTML = "";
 
